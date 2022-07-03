@@ -8,3 +8,19 @@ Date : 2022-07-03
 Study : 사용할 언어에 대한 자료구조 조사
 삽입,삭제,탐색등에 대한 시간복잡도&사용법, 어떤 자료구조를 구현한 것인지에 대해 조사
 
+사용 언어 : JAVA
+
+
+JCF(Java Collection Framework)
+
+JAVA내에서 데이터를 저장할때 이용하는 자료구조들을 한데 모아 편하게 관리하기 위에 만든 프레임워크
+
+
+
+List-
+Stack(스택)
+ArrayList(배열리스트)
+LinkedList(연결리스트)
+Vector(벡터)
+
+
