@@ -13,7 +13,6 @@
 
 문제를 해결하는데 걸리는 시간, 입력의 함수 관계를 의미한다. 주로 빅-오(Big-O) 표기법을 사용한다.
 
-[##_Image|kage@nptPr/btrFZmcaqwL/XJioiyta9t4pilkTIqVVB1/img.png|CDM|1.3|{"originWidth":514,"originHeight":390,"style":"alignCenter","caption":"출처 :&amp;nbsp; https://debugdaldal.tistory.com/158"}_##]
 
 n의 크기에 따라 각각의 속도는 확연하게 차이가 나기에 시간 복잡도에 맞춰서 문제풀이에 관한 자료구조를 사용해야 한다.  
 
