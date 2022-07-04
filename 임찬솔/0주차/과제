@@ -116,12 +116,47 @@ next       O(long n)
 
 Map-
 
+중복 x (key와 value중 value는 중복가능), 순서 보장 x, 정렬 기능 x
+중복을 자동으로 제거해준다는 점에서 용도를 다양하게 사용 가능
+삽입,삭제,조회 연산이 매우 빠르지만 순서보장과 정렬이 불가하다는 단점을 가짐
+이를 보완하기 위해 아래 3가지 구조가 생성
+
 
 
 HashMap
-Hashtable
+
+가장 빠른 자료구조 but 순서보장,정렬 x
+순서 상관없이 저장,NULL허용 (Key값으로는 하나,Value값으로는 다수 가능)
+
+put           O(1)
+remove        O(1)
+get           O(1)
+containsKey   O(1)
+next          O(h/n) h는 테이블 용량
+
+
+LinkedHashMap
+
+data를 순서대로 저장. NULL값 허용 (Key값으로는 하나,Value값으로는 다수 가능)
+
+put           O(1)
+remove        O(1)
+get           O(1)
+containsKey   O(1)
+next          O(1)
+
+
+
 TreeMap
 
+data를 추가할때 오름차순으로 자동정렬. 따라서 삽입 삭제가 굉장히 느림.
+NULL값 허용 x
+
+put           O(log n)
+remove        O(log n)
+get           O(log n)
+containsKey   O(log n)
+next          O(log n)
 
 
 ------------------------------------------------------------------------------------------------------------
