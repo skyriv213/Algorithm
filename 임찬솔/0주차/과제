@@ -16,6 +16,10 @@ JCF(Java Collection Framework)
 JAVA내에서 데이터를 저장할때 이용하는 자료구조들을 한데 모아 편하게 관리하기 위에 만든 프레임워크
 
 
+Java Collection구조
+
+lterable - Collection - List,Queue,Set
+Map - HashMap,Hashtable,TreeMap
 
 List-
 Stack(스택)
@@ -23,4 +27,16 @@ ArrayList(배열리스트)
 LinkedList(연결리스트)
 Vector(벡터)
 
+Queue-
+Deque(양방향큐)
+queue(큐)
+ArrayDeque
 
+Set-
+HashSet
+TreeSet
+
+Map-
+HashMap
+Hashtable
+TreeMap
