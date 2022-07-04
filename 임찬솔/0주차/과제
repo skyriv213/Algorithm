@@ -28,8 +28,9 @@ LinkedList(연결리스트)
 Vector(벡터)
 
 Queue-
-Deque(양방향큐)
+Deque(양 방향 큐)
 queue(큐)
+priorityQueue(우선순위 큐, 힙)
 ArrayDeque
 
 Set-
