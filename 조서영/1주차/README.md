@@ -69,8 +69,6 @@ print(high)
 
 ### 문제
 
-[https://www.acmicpc.net/problem/2470](https://www.acmicpc.net/problem/2470)
-
 KOI 부설 과학연구소에서는 많은 종류의 산성 용액과 알칼리성 용액을 보유하고 있다. 각 용액에는 그 용액의 특성을 나타내는 하나의 정수가 주어져있다.  산성 용액의 특성값은 1부터 1,000,000,000까지의 양의 정수로 나타내고, 알칼리성 용액의 특성값은 -1부터 -1,000,000,000까지의 음의 정수로 나타낸다.
 
 같은 양의 두 용액을 혼합한 용액의 특성값은 혼합에 사용된 각 용액의 특성값의 합으로 정의한다. 이 연구소에서는 같은 양의 두 용액을 혼합하여 특성값이 0에 가장 가까운 용액을 만들려고 한다.
@@ -90,8 +88,6 @@ KOI 부설 과학연구소에서는 많은 종류의 산성 용액과 알칼리�
 
 ### 문제
 
-[https://www.acmicpc.net/problem/1920](https://www.acmicpc.net/problem/1920)
-
 N개의 정수 A[1], A[2], …, A[N]이 주어져 있을 때, 이 안에 X라는 정수가 존재하는지 알아내는 프로그램을 작성하시오.
 
 ### 풀이
@@ -102,10 +98,40 @@ N개의 정수 A[1], A[2], …, A[N]이 주어져 있을 때, 이 안에 X라는
 
 ### 문제
 
-[https://www.acmicpc.net/problem/10816](https://www.acmicpc.net/problem/10816)
-
 숫자 카드는 정수 하나가 적혀져 있는 카드이다. 상근이는 숫자 카드 N개를 가지고 있다. 정수 M개가 주어졌을 때, 이 수가 적혀있는 숫자 카드를 상근이가 몇 개 가지고 있는지 구하는 프로그램을 작성하시오.
 
 ### 풀이
 
-dictionary를 이용하여, 해당 카드를 입력받을 때마다 해당 key값의 value를 증가시켰다. 만약 해당 카드가 dictionary에 존재하지 않으면 0개의 카드가 존재하는 것으로, dictionary에 존재한다면 해당카드번호를 key값으로 하여 value값을 출력한다.
+target값의 upper_bound와 target값의 lower_bound값을 찾아 그 차이를 구한다.
+
+```python
+def search_upperbound(S, target):
+    high=len(S)
+    low=0
+    while low<high:
+        mid=(high+low)//2
+        
+        if S[mid]<=target:
+            low=mid+1
+        elif S[mid]>target:
+            high=mid
+    
+    return high
+
+def search_lowerbound(S, target):
+    high=len(S)
+    low=0
+    while low<high:
+        mid=(high+low)//2
+        
+        if S[mid]>=target:
+            high=mid
+        elif S[mid]<target:
+            low=mid+1
+    
+    return low
+```
+
+![image](https://user-images.githubusercontent.com/74875490/178016675-51cc0057-4b6c-493b-a50b-bade8d348017.png)
+
+다음과 같이 target값이 3이면 high는 5, low는 3이 됨으로써 3의 개수는 2임을 알 수 있다.
