@@ -42,12 +42,20 @@ public class Main {
         }
         return low;
     }
-    public static int upperBound(int[] array, int value) {
+    
+    /*첫번째 불변식은 low-1<high, 두번째 불변식은 arr[low-1]<value<=arr[high]이다.
+    while문의 조건이 low<high이므로 첫번째 불변식은 자명하고, value<=arr[mid]일 때 mid 는 high이므로 value<=arr[high]이고,
+    value>arr[mid]일 경우 low-1 = mid 이므로 value>arr[low-1]이다.
+    반복문을 탈출할때에는 low>=high이고, 불변식이 low-1<high이므로 low==high가 된다.
+    불변식이 성립한다고 가정하면 arr[low-1]<value<=arr[low]이므로 arr[low]가 우리가 원하는 값임을 알 수 있다.
+    */
+    
+    public static int upperBound(int[] arr, int value) {
         int low = 0;
-        int high = array.length;
+        int high = arr.length;
         while (low < high) {
             final int mid = low + (high - low)/2;
-            if (value >= array[mid]) {
+            if (value >= arr[mid]) {
                 low = mid + 1;
             } else {
                 high = mid;
@@ -56,5 +64,11 @@ public class Main {
         return low;
     }
 
+    /*위의 lowerbound와 유사하게 첫번째 불변식은 low-1<high, 두번째 불변식은 arr[low-1]<=value<arr[high]이다.
+    while문의 조건이 low<high이므로 첫번째 불변식은 자명하고, value>=arr[mid]일 때 mid 는 low-1이므로 value>=arr[low-1]이고,
+    value<arr[mid]일 경우 high = mid 이므로 value<arr[high]이다.
+    반복문을 탈출할때에는 low>=high이고, 불변식이 low-1<high이므로 low==high가 된다.
+    불변식이 성립한다고 가정하면 arr[low-1]<value<=arr[low]이므로 arr[low]가 우리가 원하는 값임을 알 수 있다.
+    */
 
 }
