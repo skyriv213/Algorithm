@@ -40,3 +40,4 @@ for i in check:
     binary()
     if not ans:
         print(0, end = " ")
+

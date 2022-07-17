@@ -55,3 +55,4 @@ for i in num:
     result = 0
     binary_search(s, e)
     print(result, end = " ")
+
