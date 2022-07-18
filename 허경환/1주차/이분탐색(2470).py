@@ -47,3 +47,5 @@ else:
             answer = abs_num
     ls.sort()
     print(ls[0], ls[1])
+
+

@@ -24,3 +24,4 @@ while start+1<end:
 
 #출력
 print(start)
+

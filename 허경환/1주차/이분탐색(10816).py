@@ -32,3 +32,5 @@ for i in tar_num:
     else:
         # 0을 출력
         print(0, end=' ')
+        
+

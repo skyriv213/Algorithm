@@ -31,3 +31,4 @@ def n_queens(x):
 
 n_queens(0)
 print(ans)
+
